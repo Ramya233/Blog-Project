@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ramya",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/postgres": "^0.8.0",
+    "body-parser": "^1.20.2",
+    "build": "^0.1.4",
+    "cors": "^2.8.5",
+    "dateformat": "^5.0.3",
+    "dirname": "^0.1.0",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
+    "express": "^4.19.2",
+    "join": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0",
+    "path": "^0.12.7",
+    "pg": "^8.11.4",
+    "run": "^1.5.0",
+    "serve-static": "^1.15.0"
+  },
+  "description": ""
+}
