@@ -1,45 +1,22 @@
 //Connection details
 import pg from "pg";
 import pkg from "pg";
+import { sql } from "@vercel/postgres";
 
 const { Pool } = pkg;
 
 const pool = new Pool({
-  connectionString: process.env.POSTGRES_URL,
+  connectionString: process.env.POSTGRES_URL + "?sslmode=require",
 });
 
 pool.connect()
-  .then(() => {
-    console.log('Connected to the database');
-    // Create blogs table if it does not exist
-    createTable();
-  })
+  .then(() => console.log('Connected to the database'))
   .catch(err => console.error('Error connecting to the database', err));
 
-async function check() {
-  // Your check logic here
-}
-
-async function createTable() {
-  const query = `
-    CREATE TABLE IF NOT EXISTS blogs (
-      id serial PRIMARY KEY,
-      title varchar(500),
-      image varchar(500),
-      post text,
-      createdon timestamp DEFAULT CURRENT_TIMESTAMP,
-      category varchar(500)
-    );
-  `;
-
-  try {
-    await pool.query(query);
-    console.log('Blogs table created or already exists');
-  } catch (error) {
-    console.error('Error creating table:', error);
-  }
-}
+async function check(){
+   
+};
 
 check();
 
-export { pool, check };
+export { pool, check }; 

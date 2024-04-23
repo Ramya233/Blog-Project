@@ -11,10 +11,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.8.0",
     "axios": "^1.6.8",
     "cors": "^2.8.5",
     "dateformat": "^5.0.3",
     "env": "^0.0.2",
+    "firebase-admin": "^12.1.0",
     "html-react-parser": "^5.1.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
