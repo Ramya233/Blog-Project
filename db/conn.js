@@ -6,8 +6,9 @@ import { sql } from "@vercel/postgres";
 const { Pool } = pkg;
 
 const pool = new Pool({
-  connectionString: process.env.POSTGRES_URL + "?sslmode=require",
+  connectionString: process.env.POSTGRES_URL,
 });
+
 
 pool.connect()
   .then(() => console.log('Connected to the database'))
