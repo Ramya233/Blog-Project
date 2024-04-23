@@ -1,7 +1,6 @@
 //Connection details
 import pg from "pg";
 import pkg from "pg";
-import { sql } from "@vercel/postgres";
 
 const { Pool } = pkg;
 
